@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="build/libs/ico-moon/icoMoon.css"
+    />
+    <link rel="stylesheet" href="build/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <div class="wrapper">
+          <div class="head-logo">
+            <p>logo</p>
+          </div>
+          <form class="head-form">
+            <input
+              id="searchGoods"
+              class="head-form-input"
+              type="text"
+              placeholder="что ищем?"
+            />
+            <button id="search" class="search">поиск</button>
+            
+          </form>
+          <div class="head-basket">
+            <a href="cart.php">
+            <span class="icon-c basket-ico"></span>
+              <div class="short-cart">
+                <span class="count-goods">100 товаров</span>
+                на сумму 
+                <span class="head-basket-price">100 000р</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="wrapper">
+          <div class="category">
+            <div class="title">
+              <h3>Категории</h3>
+            </div>
+            <div class="category-list">
+              <li><a href="#" class="category-item cable" data-category="Кабель">Кабель</a></li>
+              <li><a href="#" class="category-item sockets" data-category="Розетки">Розетки</a></li>
+              <li><a href="#" class="category-item electrical-shields" data-category="Щиты">Щиты</a></li>
+              <li><a href="#" class="category-item circuit-breaker" data-category="Автоматы">Автоматические выключатели</a></li>
+            </div>
+           </div>
+          <div class="wrapper-product"></div>
+         <p class="nothing-found">
+           Ничего не найденно!!! :(
+         </p>
+        </div>
+      </div>
+    </main>
+    <script src="build/js/js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+[
+ {
+   "id": 1,
+   "category": ["Кабель"],
+   "name": "Кабель1",
+   "price": "25",
+   "desc": "Кабель прочный",
+   "image": "build/img/kabel1.jpg",
+   "units": "Цена за метр"
+  },
+  {
+    "id": 2,
+    "category": ["Кабель"],
+   "name": "Кабель2",
+   "price": "26",
+   "desc": "Кабель прочный",
+   "image": "build/img/kabel2.jpg",
+   "units": "Цена за метр"
+  },
+  {
+    "id": 3,
+    "category": ["Кабель"],
+   "name": "Кабель3",
+   "price": "22",
+   "desc": "Кабель прочный",
+   "image": "build/img/kabel3.jpg",
+   "units": "Цена за метр"
+  },
+  {
+    "id": 4,
+    "category": ["Кабель"],
+   "name": "Кабель4",
+   "price": "21",
+   "desc": "Кабель прочный",
+   "image": "build/img/kabel4.jpg",
+   "units": "Цена за метр"
+  },
+  {
+    "id": 5,
+    "category": ["Розетки"],
+    "name": "Кабель1",
+    "price": "25",
+    "desc": "Кабель прочный",
+    "image": "build/img/rozetki/rozetka1.jpg",
+    "units": "Цена за штуку"
+   },
+   {
+     "id": 6,
+     "category": ["Розетки"],
+    "name": "Кабель2",
+    "price": "26",
+    "desc": "Кабель прочный",
+    "image": "build/img/rozetki/rozetka2.jpg",
+    "units": "Цена за штуку"
+   },
+   {
+     "id": 7,
+     "category": ["Розетки"],
+    "name": "Кабель3",
+    "price": "22",
+    "desc": "Кабель прочный",
+    "image": "build/img/rozetki/rozetka3.jpg",
+    "units": "Цена за метр"
+   },
+   {
+     "id": 8,
+     "category": ["Розетки"],
+    "name": "Кабель4",
+    "price": "21",
+    "desc": "Кабель прочный",
+    "image": "build/img/rozetki/rozetka4.jpg",
+    "units": "Цена за штуку"
+   },
+   {
+    "id": 9,
+    "category": ["Щиты"],
+    "name": "Кабель1",
+    "price": "25",
+    "desc": "Кабель прочный",
+    "image": "build/img/shity/shit1.jpg",
+    "units": "Цена за метр"
+   },
+   {
+     "id": 10,
+     "category": ["Щиты"],
+    "name": "Кабель2",
+    "price": "26",
+    "desc": "Кабель прочный",
+    "image": "build/img/shity/shit2.jpg",
+    "units": "Цена за штуку"
+   },
+   {
+     "id": 11,
+     "category": ["Щиты"],
+    "name": "Кабель3",
+    "price": "22",
+    "desc": "Кабель прочный",
+    "image": "build/img/shity/shit3.jpg",
+    "units": "Цена за штуку"
+   },
+   {
+     "id": 12,
+     "category": ["Щиты"],
+    "name": "Кабель4",
+    "price": "21",
+    "desc": "Кабель прочный",
+    "image": "build/img/shity/shit4.jpg",
+    "units": "Цена за штуку"
+   },
+   {
+    "id": 13,
+    "category": ["Автоматы"],
+    "name": "Кабель1",
+    "price": "25",
+    "desc": "Кабель прочный",
+    "image": "build/img/avtomaty/avtomat1.jpg",
+    "units": "Цена за метр"
+   },
+   {
+     "id": 14,
+     "category": ["Автоматы"],
+    "name": "Кабель2",
+    "price": "26",
+    "desc": "Кабель прочный",
+    "image": "build/img/avtomaty/avtomat2.jpg",
+    "units": "Цена за метр"
+   },
+   {
+     "id": 15,
+     "category": ["Автоматы"],
+    "name": "Кабель3",
+    "price": "22",
+    "desc": "Кабель прочный",
+    "image": "build/img/avtomaty/avtomat3.jpg",
+    "units": "Цена за метр"
+   },
+   {
+     "id": 16,
+     "category": ["Автоматы"],
+    "name": "Кабель4",
+    "price": "21",
+    "desc": "Кабель прочный",
+    "image": "build/img/avtomaty/avtomat4.jpg",
+    "units": "Цена за метр"
+   }
+]
