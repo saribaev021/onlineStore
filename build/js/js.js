@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const countGoods = document.querySelector(".count-goods");
     const priceGoods = document.querySelector(".head-basket-price");
     
-
+    const declOfNum = (number, titles) => number + ' ' + 
+        titles[(number % 100 > 4 && number % 100 < 20) ? 
+            2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? number % 10 : 5]];
     //вывожу товары из localStorage в мине корзину на странице
     const minCartPage = () => {
         let length = 0;
@@ -19,9 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
             price += miniCart[key];
             length++;
         }
-        countGoods.textContent = `${length} товаров`;
+        countGoods.textContent = declOfNum(length, ["товар", "товара", "товаров"]);
         priceGoods.textContent = `${formatter.format(price)}р`
-        console.log(JSON.parse(localStorage.getItem("miniCart")));
     }
     //Получаю товары из базы данных
     const getGoods = (handler, filter) => {
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p class="product-price">${price}р</p>
                 <p class="product-units">${units}<p/>
                 <div class="basket">
-                    <input id="count" type="number" value ="1">
+                    <input id="count" type="number" value ="1" min="1">
                     <button class="basket-btn" data-id-goods="${id}" data-price-goods="${price}">
                         <span class="icon-cart_78585 basket-ico"></span>
                             в корзину
@@ -85,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //Поиск товаров
     const searchGoods = (event) => {
         event.preventDefault();
-        const input = event.target.elements.searchGoods;
         const inputValue = event.target.elements.searchGoods.value.trim();
         if(inputValue !== ""){
             const searchString = new RegExp(inputValue, "i")
@@ -109,6 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const count = target.previousElementSibling.value;
             const goodsId = target.dataset.idGoods;
             const price = target.dataset.priceGoods;
+            if(count === "0")
+            {
+                return ;
+            }
             cart[goodsId] = count;
             miniCart[goodsId] = count * price;
         }
@@ -116,6 +120,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const count = target.parentNode.previousElementSibling.value;
             const goodsId = target.parentNode.dataset.idGoods;
             const price = target.parentNode.dataset.priceGoods;
+            if(count === "0")
+            {
+                return ;
+            }
             cart[goodsId] = count;
             miniCart[goodsId] = count * price;
         }
