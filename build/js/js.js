@@ -1,7 +1,7 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
-    let cart = {};
-    const miniCart = {};
+    let cart =JSON.parse(localStorage.getItem("cart")) || {};
+    const miniCart = JSON.parse(localStorage.getItem("miniCart"))  || {};
     const productWrapper = document.querySelector(".wrapper-product");
     const category = document.querySelector(".category");
     const searchForm = document.querySelector(".head-form");
@@ -14,10 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const minCartPage = () => {
         let length = 0;
         let formatter = new Intl.NumberFormat("ru");
-        let goods = JSON.parse(localStorage.getItem("miniCart"));
         let price = 0;
-        for(let key in goods){
-            price += goods[key];
+        for(let key in miniCart){
+            price += miniCart[key];
             length++;
         }
         countGoods.textContent = `${length} товаров`;
@@ -112,10 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const price = target.dataset.priceGoods;
             cart[goodsId] = count;
             miniCart[goodsId] = count * price;
-            storageQuery();
-            minCartPage();
-            //console.log(cart);
-            //console.log(miniCart);
         }
         else if(target.parentNode.classList == "basket-btn"){
             const count = target.parentNode.previousElementSibling.value;
@@ -123,9 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const price = target.parentNode.dataset.priceGoods;
             cart[goodsId] = count;
             miniCart[goodsId] = count * price;
-            storageQuery();
-            minCartPage();
         }
+        storageQuery();
+        minCartPage();
     }
     getGoods(renderCard, randomSort);
     minCartPage();
